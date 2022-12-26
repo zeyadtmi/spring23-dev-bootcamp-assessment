@@ -33,5 +33,4 @@ In your card, include the following information:
 
 ## Sample Card
 
-Here is a sample card for your reference:
 ![Sample Card](https://i.imgur.com/roVObwx.png)
