@@ -26,7 +26,7 @@ In your card, include the following information:
 - Something you are passionate about related to social good
 - Where you're from (optional)
 
-## Above and Beyond
+## Above and Beyond (Optional)
 
 - Include animations using CSS or Javascript
 - Make your card interactive with buttons, text inputs, etc.
