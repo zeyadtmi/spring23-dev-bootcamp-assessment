@@ -17,30 +17,13 @@ body {
   position: relative;
   text-align: center;
   margin-top: 20px;
-}
-
-
-
-#name, #major, #year, #passion, #location {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: fadeIn 1s ease-in-out;
 }
 
 .card-content {
   padding: 20px;
   text-align: left;
+  animation: slideIn 1s ease-in-out;
 }
 
 .profile-pic {
@@ -53,18 +36,10 @@ body {
   position: relative;
   z-index: 2;
   border: 5px solid #4285f4;
+  animation: scaleUp 1s ease-in-out;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-  
-  .edit-btn {
+.edit-btn {
   background-color: #4285f4;
   color: #fff;
   border: none;
@@ -73,59 +48,36 @@ body {
   cursor: pointer;
   margin: 10px;
   font-weight: bold;
-  }
-  
-  h2, p {
+}
+
+h2, p {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     letter-spacing: 2px;
     font-family: 'Open Sans', sans-serif;
-  }
+    animation: flash 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: color 0.5s ease-in-out;
+}
 
-  h2 {
-    text-transform: uppercase;
-  }
-
-  /* Add a subtle animation effect */
-h2, p {
+h2:hover, p:hover {
   animation: flash 1s ease-in-out;
 }
 
-/* Control the state of the element when the animation is not playing */
-h2, p {
-  animation-fill-mode: forwards;
-}
-
-/* Use a more natural color transition */
-h2, p {
-  transition: color 0.5s ease-in-out;
-}
-
-/* Use the animation only on hover */
-h2:hover, p:hover {
-  animation: flash 1s ease;
-}
-
-/* Limit the amount of text that is animated at one time */
 h2 span, p span {
-  animation: flash 1.5s ease-in-out;
+  animation: flash 5s ease-in-out;
 }
 
-/* Add a delay between animation cycles */
-h2, p {
-  animation-delay: 2s;
+h2 {
+    text-transform: uppercase;
 }
 
 @keyframes flash {
-  0%   { color: rgb(69, 38, 179); }
-  50%  { color: rgb(185, 59, 0);}
-  100% { color: rgb(64, 38, 179);  }
+  0%   { color: rgb(0, 60, 255); }
+  25%  { color: rgb(197, 0, 0);}
+  50% { color: rgb(197, 0, 154);}
+  100% { color: rgb(0, 182, 76);  }
 }
 
-
-/* Fade in animation for the card */
-.card {
-  animation: fadeIn 1s ease-in-out;
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -135,10 +87,6 @@ h2, p {
   }
 }
 
-/* Scale up animation for the profile picture */
-.profile-pic {
-  animation: scaleUp 1s ease-in-out;
-}
 @keyframes scaleUp {
   from {
     transform: scale(0);
@@ -148,10 +96,6 @@ h2, p {
   }
 }
 
-/* Slide in animation for the card content */
-.card-content {
-  animation: slideIn 1s ease-in-out;
-}
 @keyframes slideIn {
   from {
     transform: translateY(50px);
@@ -163,10 +107,3 @@ h2, p {
   }
 }
 
-/* Fade in animation for the edit button */
-.edit-btn {
-  animation: fadeIn 1s ease-in-out;
-}
-
-
-  
